@@ -26,5 +26,7 @@ git clone git@github.com:friczky/master-crud-auth-php-native.git
 ```
 
 ganti nama folder di Config/folder.php
+
 import sql crud.sql
+
 atur koneksi di folder Config/koneksi.php

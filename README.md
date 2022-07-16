@@ -30,3 +30,8 @@ ganti nama folder di Config/folder.php
 import sql crud.sql
 
 atur koneksi di folder Config/koneksi.php
+
+# akun
+email : admin@admin.com
+
+password : admin

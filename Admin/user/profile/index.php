@@ -47,9 +47,9 @@ $row = mysqli_fetch_array($query);
                        alt="User profile picture">
                 </div>
 
-                <h3 class="profile-username text-center">Nina Mcintire</h3>
+                <h3 class="profile-username text-center"><?= $row['nama']?></h3>
 
-                <p class="text-muted text-center">Administrator</p>
+                <p class="text-muted text-center">User</p>
 
               </div>
               <!-- /.card-body -->

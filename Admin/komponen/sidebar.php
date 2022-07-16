@@ -1,15 +1,8 @@
 
 <?php 
 
-// if($_SESSION['role'] != '0'){
-//   echo '<script>';
-//   echo 'alert("Anda Tidak Memiliki Akses");';
-//   echo '</script>';
-//   echo '<script>';
-//   echo 'window.location.href = "'.admin().'";';
-//   echo '</script>';
-// }else{
-// }
+ 
+
 
 $sql = "SELECT * FROM tentang";
 $query = mysqli_query($koneksi,$sql);
@@ -63,58 +56,6 @@ $row = mysqli_fetch_array($query);
             </a>
           </li>
 
-            <!-- halaman master kerjaan  -->
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Master Kerjaan
-                <i class="fas fa-angle-left right"></i>
-                
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?= admin()?>halaman/kerjaan/tambah.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah Kerjaan</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= admin()?>halaman/kerjaan" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Data Kerjaan</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= admin()?>halaman/kerjaan/kategori.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Data Kategori Kerja</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <!-- halaman data pelamar  -->
-          <li class="nav-item">
-            <a href="<?= admin()?>halaman/pelamar" class="nav-link">
-              <i class="nav-icon fa fa-user-astronaut"></i>
-              <p>
-                Data Pelamar
-              </p>
-            </a>
-          </li>
-
-          <!-- halaman berkas  -->
-          <li class="nav-item">
-            <a href="<?= admin()?>halaman/berkas" class="nav-link">
-              <i class="nav-icon fa fa-folder"></i>
-              <p>
-                Data Berkas
-              </p>
-            </a>
-          </li>
-
          <!-- halaman master pengguna  -->
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -139,28 +80,6 @@ $row = mysqli_fetch_array($query);
               </li>
             </ul>
           </li>
-
-          
-            <!-- halaman email terkirim  -->
-          <li class="nav-item">
-            <a href="<?= admin()?>halaman/email" class="nav-link">
-              <i class="nav-icon fa fa-paper-plane"></i>
-              <p>
-                Email Terkirim
-              </p>
-            </a>
-          </li>
-
-          <!-- halaman data kontak  -->
-          <li class="nav-item">
-            <a href="<?= admin()?>halaman/kontak" class="nav-link">
-              <i class="nav-icon fas fa-address-book"></i>
-              <p>
-                Data Kontak 
-              </p>
-            </a>
-          </li>
-
           <!-- halaman tentang aplikasi  -->
           <li class="nav-item">
             <a href="<?= admin()?>halaman/tentang" class="nav-link">

@@ -2,9 +2,8 @@
 Aplikasi ini merupakan sistem untuk memanajemen lowongan kerja. Aplikasi ini dibuat menggunakan PHP Native dan menggunakan database Mysql.
 
 # Fitur
-1. CRUD Kerjaan
-2. Email Sender
-3. Auth
+1. CRUD Pengguna
+2. Auth
 4. Multiuser
 
 # Syarat Penggunaan

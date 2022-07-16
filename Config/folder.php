@@ -1,5 +1,7 @@
 <?php
 
-$folder_web = '/Project-KP/Hire-karyawan/';
+// diawali dengan garis miring / dan diakhiri /
+
+$folder_web = '/master-crud/';
 
 ?>

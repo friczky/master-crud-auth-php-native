@@ -14,7 +14,7 @@ if(isset($_POST['login'])){
         $_SESSION['nama']       = $row['nama'];
         $_SESSION['id']         = $row['id'];
         header('location:'.admin());
-    }else{
+    }else{      
         session_start();
         $_SESSION['error'] = '<div class="alert alert-danger">Email atau Password Salah</div>';
         header('location:'.login());
@@ -29,10 +29,10 @@ if(isset($_POST['login'])){
     }else{
     header('location:'.admin());
     }
-}elseif(isset($_POST['logout'])){
+}elseif(isset($_GET['logout'])){
     session_start();
     session_destroy();
-    header('location:'.login());
+    header('location:index.php');
 }else{
     header('location:'.login());
 }

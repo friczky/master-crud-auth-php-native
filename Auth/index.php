@@ -9,7 +9,6 @@ if(isset($_POST['login'])){
     if($row['email'] == $email && $row['password'] == $password){
         session_start();
         $_SESSION['email']      = $email;
-        $_SESSION['password']   = $password;
         $_SESSION['role']       = $row['role'];
         $_SESSION['nama']       = $row['nama'];
         $_SESSION['id']         = $row['id'];

@@ -14,7 +14,15 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Data exporting was unselected.
+-- Dumping data for table crud.pengguna: ~0 rows (approximately)
+REPLACE INTO `pengguna` (`id`, `nama`, `password`, `email`, `foto`, `role`) VALUES
+	(18, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com', '20788102845.JANBADRA.png', 0),
+	(19, 'Fadilah Riczky1', '21232f297a57a5a743894a0e4a801fc3', 'friczky@gmail.com', '141481106130.UINYSK.png', 1),
+	(20, 'Fadilah Riczky11111', '21232f297a57a5a743894a0e4a801fc3', 'friczky@gmail.com', '245266884Gadjah_Mada_University_Logo.png', 0);
+
+-- Dumping data for table crud.tentang: ~0 rows (approximately)
+REPLACE INTO `tentang` (`id`, `nama_web`, `maps_url`, `logo`) VALUES
+	(1, 'test', 'maps', '88336523445.JANBADRA.png');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

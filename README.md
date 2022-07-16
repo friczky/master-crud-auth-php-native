@@ -17,3 +17,14 @@ Aplikasi ini merupakan  kit curd php native. Aplikasi ini dibuat menggunakan PHP
 4. DataTables
 5. Jquery
 6. Admin LTE
+
+# cara pakai
+
+Clone dari github 
+```
+git clone git@github.com:friczky/master-crud-auth-php-native.git
+```
+
+ganti nama folder di Config/folder.php
+import sql crud.sql
+atur koneksi di folder Config/koneksi.php

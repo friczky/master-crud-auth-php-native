@@ -1,8 +1,13 @@
 <?php 
-$judul = 'Tambah Pengguna';
+$judul = 'Tentang';
 include '../../komponen/header.php';
 include '../../komponen/navbar.php';
 include '../../komponen/sidebar.php';
+
+$sql = "SELECT * FROM tentang WHERE id=1";
+$query = mysqli_query($koneksi,$sql);
+$data = mysqli_fetch_assoc($query);
+
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -12,12 +17,12 @@ include '../../komponen/sidebar.php';
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Tambah Penguna</h1>
+            <h1>Tentang Aplikasi</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Tambah Pengguna</li>
+              <li class="breadcrumb-item active">Tentang</li>
             </ol>
           </div>
         </div>
@@ -31,7 +36,7 @@ include '../../komponen/sidebar.php';
           <div class="col-md-12">
             <div class="card">
               <div class="card-header p-2">
-               Form Tambah Penguna
+               Form Tentang Aplikasi
               </div><!-- /.card-header -->
               <div class="card-body">
                 <div class="tab-content">
@@ -40,43 +45,29 @@ include '../../komponen/sidebar.php';
                   <div class="tab-pane" id="settings">
                     <form action="aksi.php" method="post" class="form-horizontal" enctype="multipart/form-data">
                       <div class="form-group row">
-                        <label for="inputName" class="col-sm-2 col-form-label">Nama</label>
+                        <label for="inputName" class="col-sm-2 col-form-label">Nama Web</label>
                         <div class="col-sm-10">
-                          <input type="text" name="nama" class="form-control" id="inputName" placeholder="Nama" required>
+                          <input type="text" name="nama_web" class="form-control" id="inputName" value="<?= $data['nama_web']?>">
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                        <label for="inputName" class="col-sm-2 col-form-label">Maps URL</label>
                         <div class="col-sm-10">
-                          <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                          <textarea name="maps_url" id="" cols="10" rows="3" class="form-control"><?= $data['maps_url']?></textarea>
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="inputName2" class="col-sm-2 col-form-label">Password</label>
+                        <label for="inputName" class="col-sm-2 col-form-label">Logo</label>
                         <div class="col-sm-10">
-                          <input type="password" name="password" class="form-control" id="inputName2" placeholder="Password" required>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputExperience" class="col-sm-2 col-form-label">Role</label>
-                        <div class="col-sm-10">
-                          <select name="role" id="" class="form-control" required>
-                            <option value="">Pilih Role</option>
-                            <option value="0">Admin</option>
-                            <option value="1">Pelamar</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputExperience" class="col-sm-2 col-form-label">Foto</label>
-                        <div class="col-sm-10">
-                          <input type="file" name="foto" id="" class="form-control" required>
+                          <input type="file" name="logo" class="form-control" id="inputName" >
+                          <input type="hidden" name="logo_old" value="<?= $data['logo']?>">
                         </div>
                       </div>
                       
+                      
                       <div class="form-group row">
                         <div class="offset-sm-2 col-sm-10">
-                          <button type="submit" name="tambah" class="btn btn-primary">Simpan</button>
+                          <button type="submit" class="btn btn-primary">Perbahrui</button>
                         </div>
                       </div>
                     </form>

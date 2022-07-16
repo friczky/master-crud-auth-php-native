@@ -4,6 +4,9 @@ include '../../komponen/header.php';
 include '../../komponen/navbar.php';
 include '../../komponen/sidebar.php';
 
+$sql = "SELECT * FROM pengguna";
+$query = mysqli_query($koneksi,$sql);
+$count = mysqli_num_rows($query);
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -37,63 +40,12 @@ include '../../komponen/sidebar.php';
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-info">
-                        <div class="inner">
-                            <h3>150</h3>
-
-                            <p>Data Kerjaan</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fa fa-file"></i>
-                        </div>
-                        <a href="<?= admin()?>halaman/kerjaan" class="small-box-footer">More info
-                            <i class="fas fa-arrow-circle"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-success">
-                        <div class="inner">
-                            <h3>53
-                            </h3>
-
-                            <p>Data Pelamar</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fa fa-user-astronaut"></i>
-                        </div>
-                        <a href="<?= admin()?>halaman/pelamar" class="small-box-footer">More info
-                            <i class="fas fa-arrow-circle-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-warning">
-                        <div class="inner">
-                            <h3>44</h3>
-
-                            <p>Data Berkas</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fa fa-folder"></i>
-                        </div>
-                        <a href="<?= admin()?>halaman/berkas" class="small-box-footer">More info
-                            <i class="fas fa-arrow-circle-right"></i>
-                        </a>
-                    </div>
-                </div>
                 <!-- ./col -->
                 <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-danger">
                         <div class="inner">
-                            <h3>65</h3>
+                            <h3><?= $count ?></h3>
 
                             <p>Data Pengguna</p>
                         </div>

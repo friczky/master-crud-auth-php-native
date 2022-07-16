@@ -1,4 +1,4 @@
-# Aplikasi Hire-karyawan
+# CRUD KIT
 Aplikasi ini merupakan  kit curd php native. Aplikasi ini dibuat menggunakan PHP Native dan menggunakan database Mysql.
 
 # Fitur
